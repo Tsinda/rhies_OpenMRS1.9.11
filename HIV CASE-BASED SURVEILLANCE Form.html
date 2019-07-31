@@ -1,0 +1,342 @@
+<htmlform>
+    <macros>
+        paperFormId = (Fill this in)
+        headerColor =#009d8e
+        fontOnHeaderColor = white
+        @ENROLLMENT_DATE@ = badacf97-0970-4dde-aee4-5e1c2bb125f7
+        @DATE_ANTI_RETROVIRALS_STARTED@ = 3ce498dc-26fe-102b-80cb-0017a47871b2
+
+        @RECENCY_ASSAY_TEST@=105617
+        @RECENCY_TEST_NAME@=105643
+        @RECENCY_ASSAY_RESULTS@=105621
+        @RECENCY_TEST_DATE@=105644
+        @LONG_TERM@=105619
+        @INVALID@=105618
+        @RECENCY_SAMPLE_COLLECTION_DATE@=105671
+
+        @NUMBER_OF_FAMILY_MEMBERS@ = fe5fdddf-96ee-42af-9b36-0ab8c3ddd05d
+        @NUMBER_OF_SEXUAL_PARTNERS@ = 3cee2924-26fe-102b-80cb-0017a47871b2 
+        <!-- @CBS_CONTACT_SEXUAL_PARTNERS_IN_LAST_12_MONTHS@=2080ba64-f5da-42ec-b80c-72bd00e3371d -->
+        @SEXUAL_PARTNERS_IN_LAST_12 MONTHS@=06de84ee-6deb-4d33-b2b6-bc680a73939c
+        @SOCIAL_NETWORK_MEMBERS@ = 504e851d-8a95-4f0f-bcad-ca081a975abf  
+        @CBS_CONTACT_AGE@=2ecf52c4-f732-46a8-9f10-45a04ca70f49   
+        @CBS_CONTACT_GENDER@=d1ecd154-13b1-433a-8480-3213e178aff7
+        @RELATION_OF_THE_CONTACT_AND_INDEX_CASE@=d4a45c62-5d82-43a2-856d-6c75db9fe842
+        @Spouse_Husband_Fiancé@=78240034-73f3-46d8-b688-81fb99f27056
+        @Girlfiend_Boyfriend@=a71fff61-4db8-43ce-98f8-5de7f689f560
+        @Couple_cohabiting_partner@=8d234f0f-c299-42e5-8edf-f2460e64704e
+        @Casual_partner@=ca27eadb-c14d-414e-8db9-694b3831e719
+        @Somon_who_pay_me_to_have_sex@=a8415b6a-065d-4cd6-9c70-4cdcec7bf8ef
+        @Somone_I_pay_to_have_sexual_relation@=f95bdebd-c174-4eaa-86cf-067f78db5364
+        @Victim_of_violence@=825ee96c-5277-4b29-bece-7d94e654da34
+        @Partner_is_unknown@=7f0dd8e6-f0c3-4cb1-a81e-24391fc7200b
+        @His_her_child@=98463468-4bc0-4df0-8b78-ad5e208c5d2a
+        @Member_of_his_social_network@=1394d37f-38ca-4f8a-a486-ac46e0ed7523
+        @Other_PWID_TG_etc@=d0385b0e-c9ac-4f63-ab8d-b6273c029f9d
+        @CBS_CONTACT_HIV_STATUS@=438e1ee2-5642-4868-867d-960eca6e6451
+        @POSITIVE@=3cd3a7a2-26fe-102b-80cb-0017a47871b2
+        @NEGATIVE@=3cd28732-26fe-102b-80cb-0017a47871b2
+        @UNKNOWN@=3cd6fac4-26fe-102b-80cb-0017a47871b2
+        @CBS_RISK_OF_VIOLENCE@= 5d90078d-43d5-4ea1-9bf6-cda5398d1d67
+        @YES@=3cd6f600-26fe-102b-80cb-0017a47871b2
+        @NO@=3cd6f86c-26fe-102b-80cb-0017a47871b2
+        @CBS_PLANNED_REFERENCE_TYPE@=d300cfbb-c771-44db-8272-7065efc88242
+        @CBS_REFERENCE_BY_CLIENT@=c1ef1230-a9f7-4593-bdc8-1e9a08d45968
+        @CBS_REFERENCE_BY_HEALTH_CARE_PROVIDER@=5e053da8-f8ac-4f4d-902f-dba756a312a5
+        @CBS_DOUBLE_REFERENCE@=e7fbe2c7-b9c4-4caa-83f3-3fc327a225c4
+        @CBS_REFERENCE_FAMILY_TESTING@=35de662a-63de-4dbc-92c4-2b08165406ab
+        @CBS_REFERENCE_SOCIAL_NETWORK_TESTING@=d195e749-fa4a-43e3-8ceb-a72f25fb2be4
+        @CBS_HIV_STATUS_KNOWN@=6c93ead4-d189-4476-a81d-1bef16bda6a4
+        @CBS_REFERENCE_NOT_PLANNED@=8919a43c-fdee-4861-9fd8-ff068d4d740c
+        @ELECTRONIC_RECORD_MATCHES_PAPER_FORM@=RWANDA:Electronic record matches paper form
+
+
+    </macros>
+
+
+<style>
+        th.tableHeader {
+            background-color: #009d8e;
+            color: #FFFFFF;
+            font-size: 16px;
+            text-align: left;
+        }
+        .section {
+            border: 1px solid $headerColor;
+            padding: 2px;
+            text-align: left;
+            margin-bottom: 1em;
+        }
+        .sectionHeader {
+            background-color: $headerColor;
+            color: $fontOnHeaderColor;
+            display: block;
+            padding: 2px;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr.spaceUnder>td {
+            padding-bottom: 1em;
+        }
+
+        td {
+            font-size: 15px;
+        }
+        table.baseline-aligned td {
+            vertical-align: baseline;
+        }
+        table,td,th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        th {
+        text-align: left;
+        background-color: #D9D9D9;
+        font-size: 16px;
+        }
+        #htmlFormEntryBanner {
+        display: none;
+        }
+
+        .error {
+        display: none;
+        }
+
+        .lables {
+        width: 200px;
+        }
+
+        table {
+        width: 100%;
+        }
+
+       .selectedCancerStagingKeys {
+        page-break-before: always;
+        border: 0px;
+        }
+
+        table.selectedCancerStagingKeys td {
+        border: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        if(jQuery){   
+            $j(document).ready(function(){                
+                var totalContacts=50;
+
+                $j("#numFamily").change(function (){
+                    var numFamContact=0;
+                    numFamContact = getValue("numFamily.value");
+                    totalContacts+=numFamContact;
+                    alert(totalContacts);
+                });
+
+
+                $j("#numSexPartners").change(function (){
+                    numPartnerContact=0;
+                    numPartnerContact = int(getValue("numSexPartners.value"));
+                    totalContacts =totalContacts + numPartnerContact;
+                    alert(totalContacts);
+
+                });
+
+                $j("#numSocialNetMembers").change(function (){
+                    numSocialNet = 0;
+                    numSocialNet = getValue("numSocialNetMembers.value");
+                    totalContacts += numSocialNet;
+                    alert(totalContacts);
+
+                });
+
+          });
+        }
+
+    </script>
+
+    <section headerLabel="1. Encounter Details">
+        <table cellspacing="0" cellpadding="6" width="100%">
+            <tr>
+                <td>Date d'enrollment dans le CBS (eNROLLMENT DATE IN cbs):</td>
+                <td><obs conceptId="$@ENROLLMENT_DATE@" allowFutureDates="true"/> </td>
+            </tr>
+            <tr>
+                <td>№ d'Identifiant Unique  (UPID): </td>
+                <td>UPID</td>
+            </tr>
+            <tr>
+                <td>Date de début  des  ARVs (Date of ART initiation):</td>
+                <td><obs conceptId="$@DATE_ANTI_RETROVIRALS_STARTED@" allowFutureDates="true"/> </td>
+            </tr>
+        </table>
+    </section><br></br>
+
+    <section headerLabel="Information sur le Test de 'Recency Testing' (Recency Testing Information)">
+    <table>
+        <tr>
+            <td>
+                <strong>Date de collecte  de l'échantillon (Date of sample collection)</strong>: <obs conceptId="$@RECENCY_SAMPLE_COLLECTION_DATE@" allowFutureDates="true"/> 
+            </td>
+
+            <td>
+                Le site où l'échantillon a été référé  (Site where sample was referred): <encounterLocation /> 
+            </td>
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1.Date de réception du Résultat dans le service  ARV (Date of result reception at ARV Service):<obs conceptId="$@RECENCY_VIRAL_LOAD_RESULT_DATE@" allowFutureDates="true"/></td>
+            <td>
+                Résultat (R/LT)  (Result R/LT): <obs conceptId="$@RECENCY_ASSAY_RESULTS@" conceptAnswerIds="$@RECENT@, $@LONG_TERM@" answerLabels="R, LT" style="radio"/>
+            </td>           
+            <td>
+                Date d'annonce du résultat au Cas Index (Date result was disclosed to Index Case): <obs conceptId="$@ENROLLMENT_DATE@" allowFutureDates="true"/> 
+            </td>
+        </tr>
+    </table>
+    <br></br>
+    </section>
+
+    <section headerLabel="Nombre de Contacts (Number of Contacts) (information bellow are reported for each sexual partner)">
+        <table>
+            <tr style="border: 1px solid black;">
+                <td>Family member (Membres de la famille):
+                    <obs conceptId="$@NUMBER_OF_FAMILY_MEMBERS@" id="numFamily"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sexual Partners in the last 12 months:(Partenaires sexuels reçus  durant les 12 derniers mois)
+                    <obs conceptId="$@NUMBER_OF_SEXUAL_PARTNERS@" id="numSexPartners"/> 
+                </td>
+            </tr>  
+            <tr>                 
+                <td>
+                    Social Network members(Personnes du  réseau socia):<obs conceptId="$@SOCIAL_NETWORK_MEMBERS@" id ="numSocialNetMembers"/> 
+                </td>
+            </tr>
+        </table><br></br>
+    </section>
+
+    <section headerLabel="Information sur les contacts (Information on Contacts)">
+        <div class="divContactInfo">
+    <table>
+        <th>
+            <strong> Charactéristiques de Contacts (Characteristics of Contacts)</strong>
+        </th>
+        <tr>
+            <td>
+                Code du Contact (Code of the Contact)<br/><br/>
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td>AGE
+                <obs conceptId="$@CBS_CONTACT_AGE@" />
+            </td>
+            <!-- <td><lookup expression="patient.age"/>;</td> -->
+        </tr>
+
+        <tr>
+            <td>Sex
+                <obs conceptId="$@CBS_CONTACT_GENDER@" />
+            </td>
+            <!-- <td><lookup expression="patient.gender"/></td> -->
+        </tr>  
+        
+        <tr>
+              <td>
+                Relation du Contact avec le Cas Index (1,2,3,4,5,6,7,8,9,10,11) (Relation of the Contact and Index case)
+                &#160;&#160;&#160;
+                <obs conceptId="$@RELATION_OF_THE_CONTACT_AND_INDEX_CASE@" conceptAnserIds="$@Spouse_Husband_Fiancé@, $@Girlfiend_Boyfriend@, $@Couple_cohabiting_partner@, $@Casual_partner@, $@Somon_who_pay_me_to_have_sex@, $@Somone_I_pay_to_have_sexual_relation@, $@Victim_of_violence@, $@Partner_is_unknown@, $@His_her_child@, $@Member_of_his_social_network@, $@Other_PWID_TG_etc@" answerLabels="Epouse/Mari/Fiancé (Spouse/Husband/Fiancé),Copine/Copain (Girlfiend/Boyfriend), Co-habitants (Co-habiting), Partenaire Occasionnel (Casual partner), Quelqu’un(e) qui me paie pour avoir des relations sexuelles (Somone who pay me to have sexual relation), Quelqu’un(e) que je paye pour avoir des relations sexuelles (Somone I pay  to have sexual relation), Victime de Viol (Victim of violence), Partenaire Inconnu(e) (Partner is unknown), Son Enfant (His/her child), Membre de son Réseau Social (Member of his social network), Autres (PWID TG etc) (Other - PWID, TG, etc "/>
+              </td>
+        </tr>
+         
+         <tr>
+            <td>
+                Contact HIV Status(P= Positif,N= Negatif, Inconnu)(Status VIH du Contact):
+                <obs conceptId="$@CBS_CONTACT_HIV_STATUS@" conceptAnswerIds="$@POSITIVE@, $@NEGATIVE@, $@UNKNOWN@" answerLabels="P, N,  Inconnu" style="radio"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                Risk of violence (Yes/No) (Risque de Violence (O=Oui/N=Non)):
+                <obs conceptId="$@CBS_RISK_OF_VIOLENCE@" conceptAnswerIds="$@YES@, $@NO@" answerLabels="0, N" style="radio"/>
+            </td>
+         </tr>
+        <tr>
+            <td>Type de Reference Plannifiee (A,B,C,D,E,F,G) (Planned type of reference)
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                <obs conceptId="$@CBS_PLANNED_REFERENCE_TYPE@" conceptAnswerIds="$@CBS_REFERENCE_BY_CLIENT@, $@CBS_REFERENCE_BY_HEALTH_CARE_PROVIDER@, $@CBS_DOUBLE_REFERENCE@, $@CBS_REFERENCE_FAMILY_TESTING@, $@CBS_REFERENCE_SOCIAL_NETWORK_TESTING@, $@CBS_HIV_STATUS_KNOWN@, $@CBS_REFERENCE_NOT_PLANNED@" answerLabels="Référence par le Client    (Reference by the client),Référence par le Prestataire (Reference by the health care provider),Double Référence (Double reference),Test de Famille (Family testing),Test dans le Réseau Social (Social Network testing),Statut VIH du contact est déjà connu  (HIV status is already known),Pas de référence plannifié, il y a risque de violence (Reference not planned, there is risk of violence)"/>
+            </td>
+        </tr>
+
+
+    </table><br></br>
+</div>
+    </section>
+
+
+     <table>
+        <tr>
+            <th class="tableHeader" colspan="3">
+                <strong> Resultats de la notification de Contacts (Outcome of Contact notification process): Duplicate according to number of contact</strong>
+            </th>
+        </tr>
+
+        <tr>
+            <td>Contact invite a la FOSA (Contact successfully invited ) (O/N)/ Y/N </td>
+            <td>Dropdown</td>
+        </tr>
+
+        <tr>
+            <td>Contact recu a la formation sanitaire ? (Contact recieved at health facility?)</td>
+            <td>O/N (Y/N) dropdown (Si "N", raison (1,2,3,4,5,6,7)) (If "N", reason)</td>
+            <td><obs conceptId="$@ELECTRONIC_RECORD_MATCHES_PAPER_FORM@" style="radio"/></td>
+        </tr>
+
+        <tr>
+            <td>Si "N", raison (11,2,3,4,5,6,7) (If "N", reason)</td>
+            <td>dropdown</td>
+        </tr>
+
+        <tr>
+            <td>Si "O", Qui l'a notifie (A,B,C) (If "Y", who notified the index case)</td>
+            <td>dropdown</td>
+        </tr>  
+        
+        <tr>
+              <td>Si "O", Moyen de Notification (A,B,C,D,E,F,G) (If "Y", notification approach)</td>
+              <td>Dropdown </td>
+        </tr>
+         
+         <tr>
+            <td>Contact testé pour le VIH? (Was the Contact tested for HIV?)</td>
+            <td>O/N (Y/N)</td>
+            <td>Si "N", Raison(A,B,C) (If "N", reason)</td>
+            <td>Si "O", Résultat  N/P (A,B,C) (If "Y", result)</td>
+         </tr>
+
+         <tr>
+            <td>Si le Contact est testé VIH Positif (If contact is tested HIV positive)</td>
+            <td></td>
+         </tr>
+
+         <tr>
+            <td>Si Contact "Non testé", a-t-il recu le HIV self test kit? (If contact not tested, did he/she recieve HIV self-testing kit?)</td>
+            <td>Y/N</td>
+         </tr>
+         <tr>
+            <td>Observation (Comments)</td>
+            <td>Y/N</td>
+         </tr>
+         
+
+
+    </table>
+
+
+</htmlform>
