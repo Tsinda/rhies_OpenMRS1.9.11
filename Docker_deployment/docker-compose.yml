@@ -1,0 +1,12 @@
+openmrs-tomcat:
+  image: savicsorg/openmrs-tomcat1911:v1.0
+  ports:
+    - "8081:8080"
+  container_name: openmrs-tomcat
+  links:
+    - openmrs-mysql
+openmrs-mysql:
+  image: savicsorg/openmrs-mysql1911:v1.0
+  ports:
+    - "3306:3306"
+  container_name: openmrs-mysql
