@@ -42,7 +42,7 @@
 -->
 
 <role rolename="saviors"/>
-<user username="savior" password="SaviorOnAction" roles="saviors"/>
+<user username="savior" password="SaviorOnAction" roles="admin,admin-gui,manager,manager-gui"/>
 
 </tomcat-users>
 
