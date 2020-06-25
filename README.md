@@ -13,8 +13,8 @@ The purpose of Rwandan Health Information Exchange System (RHIES) project is to 
 6. Push your image to the docker hub by running the command **docker push savicsorg/openmrs-mysql1911:v1.1** 
 ,Please do not forget to change the image version
 
-## Licence
-Proprietary.
+## License
+Mozilla Public License 2.0
 
 ## Created and Developed By
 [Savics SRL](https://savics.org)
