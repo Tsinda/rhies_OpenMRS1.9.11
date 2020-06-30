@@ -2,7 +2,7 @@ version: '3'
 
 services:
   openmrs-mysql-facilityName-fosaCode:
-      container_name: openmrs-mysq-facilityName-fosaCode
+      container_name: openmrs-mysql-facilityName-fosaCode
       image: savicsorg/openmrs-mysql1911:v1.1
       volumes:
         - ./disc/mysql/facilityName-fosaCode-data:/var/lib/mysql
